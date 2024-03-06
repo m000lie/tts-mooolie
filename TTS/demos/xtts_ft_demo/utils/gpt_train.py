@@ -123,11 +123,11 @@ def train_gpt(language, num_epochs, batch_size, grad_acumm, train_csv, eval_csv,
         # Optimizer values like tortoise, pytorch implementation with modifications to not apply WD to non-weight parameters.
         optimizer="AdamW",
         optimizer_wd_only_on_weights=OPTIMIZER_WD_ONLY_ON_WEIGHTS,
-        optimizer_params={"betas": [0.9, 0.96], "eps": 1e-8, "weight_decay": 1e-2},
-        lr=5e-06,  # learning rate
+        optimizer_params={"betas": [0.9, 0.96], "eps": 1e-8, "weight_decay": 0.5},
+        lr=5e-08,  # learning rate
         lr_scheduler="MultiStepLR",
         # it was adjusted accordly for the new step scheme
-        lr_scheduler_params={"milestones": [50000 * 18, 150000 * 18, 300000 * 18], "gamma": 0.5, "last_epoch": -1},
+        lr_scheduler_params={"milestones": [2500, 5000, 8000], "gamma": 0.5, "last_epoch": -1},
         test_sentences=[],
     )
 
