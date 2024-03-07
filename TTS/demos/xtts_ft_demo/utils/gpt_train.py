@@ -127,7 +127,7 @@ def train_gpt(language, num_epochs, batch_size, grad_acumm, train_csv, eval_csv,
         lr=5e-06,  # learning rate
         lr_scheduler="MultiStepLR",
         # it was adjusted accordly for the new step scheme
-        lr_scheduler_params={"milestones": [30, 100, 200, 300, 400, 500, 750, 1000], "gamma": 0.5, "last_epoch": -1},
+        lr_scheduler_params={"milestones": [30, 70, 110, 150, 190, 230, 270, 310, 350, 390, 430, 470, 510, 550, 590], "gamma": 0.5, "last_epoch": -1},
         test_sentences=[],
     )
 
