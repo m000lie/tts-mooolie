@@ -60,7 +60,7 @@ def format_audio_list(audio_files, target_language="en", out_path=None, buffer=0
     if gradio_progress is not None:
         tqdm_object = gradio_progress.tqdm(audio_files, desc="Formatting...")
     else:
-        tqdm_object = tqdm(audio_files)
+        tqdm_object = tqdm(audio_files) # progress bar
 
     for audio_path in tqdm_object:
         wav, sr = torchaudio.load(audio_path)
