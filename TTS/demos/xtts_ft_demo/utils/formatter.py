@@ -45,6 +45,7 @@ def list_files(basePath, validExts=None, contains=None):
                 yield audioPath
 
 def format_audio_list(audio_files, target_language="en", out_path=None, buffer=0.2, eval_percentage=0.15, speaker_name="coqui", gradio_progress=None):
+    print(audio_files)
     audio_total_size = 0
     # make sure that ooutput file exists
     os.makedirs(out_path, exist_ok=True)
@@ -53,7 +54,7 @@ def format_audio_list(audio_files, target_language="en", out_path=None, buffer=0
     device = "cuda" if torch.cuda.is_available() else "cpu" 
 
     print("Loading Whisper Model!")
-    asr_model = WhisperModel("large-v2", device=device, compute_type="float16")
+    asr_model = WhisperModel("large-v2")
 
     metadata = {"audio_file": [], "text": [], "speaker_name": []}
 

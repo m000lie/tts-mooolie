@@ -1,0 +1,12 @@
+Running on local URL:  http://0.0.0.0:5003
+2024-03-07 17:44:16,988 [INFO] HTTP Request: GET http://localhost:5003/startup-events "HTTP/1.1 200 OK"
+2024-03-07 17:44:16,997 [INFO] HTTP Request: HEAD http://localhost:5003/ "HTTP/1.1 200 OK"
+2024-03-07 17:44:17,153 [INFO] HTTP Request: GET https://checkip.amazonaws.com/ "HTTP/1.1 200 "
+2024-03-07 17:44:17,403 [INFO] HTTP Request: GET https://api.gradio.app/pkg-version "HTTP/1.1 200 OK"
+2024-03-07 17:44:17,632 [INFO] HTTP Request: POST https://api.gradio.app/gradio-initiated-analytics/ "HTTP/1.1 200 OK"
+2024-03-07 17:44:21,067 [INFO] HTTP Request: GET https://api.gradio.app/v2/tunnel-request "HTTP/1.1 200 OK"
+Running on public URL: https://653af2d651f93e0b60.gradio.live
+
+This share link expires in 72 hours. For free permanent hosting and GPU upgrades, run `gradio deploy` from Terminal to deploy to Spaces (https://huggingface.co/spaces)
+2024-03-07 17:44:21,808 [INFO] HTTP Request: POST https://api.gradio.app/gradio-launched-telemetry/ "HTTP/1.1 200 OK"
+Loading Whisper Model!
